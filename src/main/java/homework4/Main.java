@@ -11,7 +11,7 @@ public class Main {
         Dog2.swim(12);
         Dog2.run(399);
 
-        Dog Dog3= new Dog("Panther");
+        Dog Dog3 = new Dog("Panther");
         Dog3.swim(1);
         Dog3.run(1);
 
@@ -28,13 +28,11 @@ public class Main {
         Cat3.run(-1);
         Cat3.swim(-1);
 
-        System.out.println("\nTotal Animals count = " + (Cat.getCatCounter()+Dog.getDogCounter()) + "\nTotal Cats count = "
-                + Cat.getCatCounter() + "\nTotal Dogs count = "+ Dog.getDogCounter() + "\nTotal Dead Cats Counter: " + Cat.getDeadCatCounter());
+        System.out.println("\nTotal Animals count = " + (Cat.getCatCounter() + Dog.getDogCounter()) + "\nTotal Cats count = "
+                + Cat.getCatCounter() + "\nTotal Dogs count = " + Dog.getDogCounter() + "\nTotal Dead Cats Counter: " + Cat.getDeadCatCounter());
 
 
     }
-
-
 
 
 }
