@@ -21,6 +21,7 @@ public class Cat extends Animals {
     }
 
 
+    @Override
     public void swim(int swimLength) {
         while (true) {
 

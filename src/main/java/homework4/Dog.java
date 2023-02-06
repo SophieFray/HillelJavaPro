@@ -19,6 +19,7 @@ public class Dog extends Animals {
         }
     }
 
+    @Override
     public void swim ( int swimLength){
         while (true) {
 
