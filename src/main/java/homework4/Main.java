@@ -28,7 +28,8 @@ public class Main {
         Cat3.run(-1);
         Cat3.swim(-1);
 
-        System.out.println("\nTotal Animals count = " + (Cat.getCatCounter()+Dog.getDogCounter()) + "\nTotal Cats count = " + Cat.getCatCounter() + "\nTotal Dogs count = "+ Dog.getDogCounter());
+        System.out.println("\nTotal Animals count = " + (Cat.getCatCounter()+Dog.getDogCounter()) + "\nTotal Cats count = "
+                + Cat.getCatCounter() + "\nTotal Dogs count = "+ Dog.getDogCounter() + "\nTotal Dead Cats Counter: " + Cat.getDeadCatCounter());
 
 
     }

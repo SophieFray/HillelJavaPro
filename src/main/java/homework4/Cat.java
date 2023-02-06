@@ -3,6 +3,7 @@ package src.main.java.homework4;
 public class Cat extends Animals {
 
     private static int catCounter = 0;
+    private static int deadCatCounter = 0;
     private String name;
 
     @Override
@@ -27,6 +28,7 @@ public class Cat extends Animals {
                 System.out.println("\nIncorrect parameter!");
             } else {
                 System.out.println("\n" + this.name + " is dead! Cat`s can`t swim!");
+                deadCatCounter++;
             }
             break;
 
@@ -41,6 +43,10 @@ public class Cat extends Animals {
 
     public static int getCatCounter() {
         return catCounter;
+    }
+
+    public static int getDeadCatCounter() {
+        return deadCatCounter;
     }
 
     public String getName() {
