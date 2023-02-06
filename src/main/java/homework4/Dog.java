@@ -10,9 +10,9 @@ public class Dog extends Animals {
         while (true) {
 
             if (runLength > 500 || runLength < 1) {
-                System.out.println("Dogs cant run more then 500m or less then 1m!");
+                System.out.println("\nDogs cant run more then 500m or less then 1m!");
             } else {
-                System.out.println(this.name + " runs " + runLength + " meters.");
+                System.out.println("\n" + this.name + " runs " + runLength + " meters.");
             }
             break;
 
@@ -24,9 +24,9 @@ public class Dog extends Animals {
 
 
             if (swimLength > 10 || swimLength < 1) {
-                System.out.println("Dogs cant swim more then 10m or less then 1m!");
+                System.out.println("\nDogs cant swim more then 10m or less then 1m!");
             } else {
-                System.out.println(this.name + " swims " + swimLength + " meters.");
+                System.out.println("\n" + this.name + " swims " + swimLength + " meters.");
             }
             break;
 

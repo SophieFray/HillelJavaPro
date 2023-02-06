@@ -18,12 +18,15 @@ public class Main {
 
         Cat Cat1 = new Cat("Fluffy");
         Cat1.run(501);
+        Cat1.swim(501);
 
         Cat Cat2 = new Cat("Generic");
         Cat2.run(200);
+        Cat2.swim(200);
 
         Cat Cat3 = new Cat("Alfred");
         Cat3.run(-1);
+        Cat3.swim(-1);
 
         System.out.println("\nTotal Animals count = " + (Cat.getCatCounter()+Dog.getDogCounter()) + "\nTotal Cats count = " + Cat.getCatCounter() + "\nTotal Dogs count = "+ Dog.getDogCounter());
 
