@@ -5,10 +5,10 @@ public interface Participant {
     void run();
     void jump();
 
-    public int getRunLength();
+    int getRunLength();
 
-    public int getJumpHeight();
+    int getJumpHeight();
 
-    public String getName();
+    String getName();
 
 }

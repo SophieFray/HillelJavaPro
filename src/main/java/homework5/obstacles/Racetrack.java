@@ -12,6 +12,7 @@ public class Racetrack implements Obstacle{
 
     @Override
     public boolean overcome(Participant participant) {
+        participant.run();
         if(participant.getRunLength() > length){
             return true;
         }

@@ -15,12 +15,12 @@ public class Robot implements Participant{
 
     @Override
     public void run() {
-        System.out.println("Running...");
+        System.out.println("\n" + name + " is running...");
     }
 
     @Override
     public void jump() {
-        System.out.println("Jumping...");
+        System.out.println("\n" + name +" is jumping...");
     }
 
     @Override

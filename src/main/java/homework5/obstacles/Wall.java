@@ -12,6 +12,7 @@ public class Wall implements Obstacle{
 
     @Override
     public boolean overcome(Participant participant) {
+        participant.jump();
         if(participant.getJumpHeight() > height){
 
             return true;
