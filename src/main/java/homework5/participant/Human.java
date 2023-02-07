@@ -5,9 +5,12 @@ public class Human implements Participant{
     private int runLength;
     private int jumpHeight;
 
-    public Human(int runLength, int jumpHeight) {
+    private String name;
+
+    public Human(int runLength, int jumpHeight, String name) {
         this.runLength = runLength;
         this.jumpHeight = jumpHeight;
+        this.name = name;
     }
 
     @Override
@@ -18,5 +21,20 @@ public class Human implements Participant{
     @Override
     public void jump() {
         System.out.println("Jumping...");
+    }
+
+    @Override
+    public int getRunLength() {
+        return runLength;
+    }
+
+    @Override
+    public int getJumpHeight() {
+        return jumpHeight;
+    }
+
+    @Override
+    public String getName() {
+        return name;
     }
 }

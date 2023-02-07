@@ -1,5 +1,7 @@
 package src.main.java.homework5.obstacles;
 
+import src.main.java.homework5.participant.Participant;
+
 public class Racetrack implements Obstacle{
 
     private int length;
@@ -9,7 +11,14 @@ public class Racetrack implements Obstacle{
     }
 
     @Override
-    public void overcome() {
-        System.out.println("test");
+    public boolean overcome(Participant participant) {
+        if(participant.getRunLength() > length){
+            return true;
+        }
+        return false;
+    }
+
+    public int getLength() {
+        return length;
     }
 }

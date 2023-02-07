@@ -30,34 +30,66 @@ public class Main {
         obstacles.add(obstacle5);
 
 
-
-        Participant participant1 = new Cat(150,12);
+        Participant participant1 = new Cat(150, 12, "Snezhok");
         participants.add(participant1);
 
-        Participant participant2 = new Cat(200,15);
+        Participant participant2 = new Cat(500, 10, "Stezhok");
         participants.add(participant2);
 
-        Participant participant3 = new Human(50,12);
+        Participant participant3 = new Human(50, 12, "Kozhanniy");
         participants.add(participant3);
 
-        Participant participant4 = new Human(300,12);
+        Participant participant4 = new Human(300, 12, "Valeriy");
         participants.add(participant4);
 
-        Participant participant5 = new Robot(5000,50);
+        Participant participant5 = new Robot(5000, 50, "GP-008|35|4");
         participants.add(participant5);
 
-        Participant participant6 = new Robot(2000,2);
+        Participant participant6 = new Robot(2000, 2, "Roomba");
         participants.add(participant6);
 
 
         for (int i = 0; i < participants.size(); i++) {
+            int totalDistance = 0;
+            int totalWallsOvercome = 0;
+            System.out.println();
+
+            Participant participant = participants.get(i);
+
             for (int j = 0; j < obstacles.size(); j++) {
+                if (obstacles.get(j) instanceof Wall) {
 
+                    Wall current = ((Wall) obstacles.get(j));
+                    boolean result = current.overcome(participant);
 
+                    if (!result) {
+                        System.out.println("Participant " + participant.getName() + " didn`t get over " + current.getClass().getName() + " "
+                                + current.getHeight() + " meters height on distance of " + totalDistance + " meters. Total overcomed walls: " + totalWallsOvercome);
+                        break;
 
+                    }
+                    totalWallsOvercome++;
+                    System.out.println("Participant " + participant.getName() + " got over " + current.getClass().getName() + " "
+                            + current.getHeight() + " meters height on distance of " + totalDistance + " meters.");
+
+                } else {
+                    Racetrack current = ((Racetrack) obstacles.get(j));
+                    boolean result = current.overcome(participant);
+
+                    if (!result) {
+
+                        System.out.println("Participant " + participant.getName() + " didn`t run over " + current.getClass().getName() + " "
+                                + current.getLength() + " meters length on distance of " + (totalDistance + participant.getRunLength()) + " meters. Total overcomed walls: " + totalWallsOvercome);
+                        break;
+
+                    }
+                    totalDistance += current.getLength();
+                    System.out.println("Participant " + participant.getName() + " run over " + current.getClass().getName() + " "
+                            + current.getLength() + " meters length on distance of " + totalDistance + " meters.");
+
+                }
             }
         }
-
 
 
     }

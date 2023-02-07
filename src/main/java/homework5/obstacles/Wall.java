@@ -1,5 +1,7 @@
 package src.main.java.homework5.obstacles;
 
+import src.main.java.homework5.participant.Participant;
+
 public class Wall implements Obstacle{
 
     private int height;
@@ -9,7 +11,15 @@ public class Wall implements Obstacle{
     }
 
     @Override
-    public void overcome() {
+    public boolean overcome(Participant participant) {
+        if(participant.getJumpHeight() > height){
 
+            return true;
+
+        } return false;
+    }
+
+    public int getHeight() {
+        return height;
     }
 }
