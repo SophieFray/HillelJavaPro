@@ -1,9 +1,11 @@
 package src.main.java.homework5.participant;
 
-public class Cat implements Participant{
+public class Cat implements Participant {
 
     private int runLength;
     private int jumpHeight;
+    private int totalDistance;
+    private int totalObstacles;
 
     private String name;
 
@@ -37,5 +39,29 @@ public class Cat implements Participant{
     @Override
     public String getName() {
         return name;
+    }
+
+    @Override
+    public int getTotalDistance() {
+
+        return totalDistance;
+    }
+
+    @Override
+    public int getTotalObstacles() {
+
+        return totalObstacles;
+    }
+
+    ;
+
+    @Override
+    public void setTotalDistance(int totalDistance) {
+        this.totalDistance = totalDistance;
+    }
+
+    @Override
+    public void setTotalObstacles(int totalObstacles) {
+        this.totalObstacles = totalObstacles;
     }
 }
